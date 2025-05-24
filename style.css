@@ -1,0 +1,270 @@
+/* Reset margins and paddings, set box-sizing for easier layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling: soft cream background, deep blue text for elegance */
+body {
+  font-family: 'Georgia', serif;
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #2B3A67; /* Deep navy blue text */
+  line-height: 1.6;
+  padding: 20px 0;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+p {
+  text-align: center;
+}
+
+/* Soft translucent ivory overlay on background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+}
+
+/* Container styling with soft cream background and subtle shadow */
+.container {
+  background-color: rgba(250, 245, 235, 0.95); /* Light cream */
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(43, 58, 103, 0.15); /* soft navy shadow */
+  max-width: 900px;
+  margin: 20px auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header styling with elegant gold border and warm color */
+header {
+  border-bottom: 3px solid #BFA156; /* muted gold */
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #3A4A7A; /* slate blue */
+  margin-bottom: 12px;
+  text-align: center;
+  text-shadow: 1px 1px 2px #D9C89B; /* soft gold glow */
+}
+
+/* Navigation menu - flex layout centered with spacing */
+nav ul.nav-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+/* Navigation links normal state with muted navy color */
+nav ul.nav-list li a {
+  text-decoration: none;
+  color: #3A4A7A; /* slate blue */
+  font-weight: 700;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.35s ease;
+}
+
+/* Navigation links hover/focus state with warm gold background */
+nav ul.nav-list li a:hover,
+nav ul.nav-list li a:focus {
+  color: #fff; /* white text */
+  background-color: #BFA156; /* muted gold */
+  border-color: #A3853A; /* darker gold */
+  box-shadow: 0 4px 10px rgba(191, 161, 86, 0.5); /* gold glow */
+}
+
+/* Active nav link with deep navy background and gold text */
+nav ul.nav-list li a.active {
+  background-color: #2B3A67; /* deep navy */
+  color: #BFA156; /* muted gold */
+  border-color: #1D2748;
+  box-shadow: 0 4px 12px rgba(43, 58, 103, 0.7);
+}
+
+/* Remove default list styles and center all lists */
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Inline-block list items with spacing */
+ul li, ol li {
+  display: inline-block;
+  margin: 0 18px 12px 18px;
+  text-align: center;
+}
+
+/* Main content spacing */
+main {
+  margin-bottom: 45px;
+}
+
+/* Section headings styled with deep navy color and letter spacing */
+h2 {
+  margin-bottom: 12px;
+  color: #2B3A67; /* deep navy */
+  letter-spacing: 1.1px;
+  text-align: center;
+}
+
+/* Blockquote with warm cream background and gold border, italic style */
+blockquote {
+  font-style: italic;
+  background-color: #F5EAD9; /* soft cream */
+  border-left: 5px solid #BFA156; /* muted gold */
+  padding: 14px 20px;
+  margin-bottom: 25px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px rgba(191, 161, 86, 0.3); /* soft gold shadow */
+}
+
+/* Form labels with deep navy color */
+form label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #2B3A67; /* deep navy */
+}
+
+/* Form inputs styling: light cream background, navy border */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #7B8CAA; /* muted blue-gray */
+  border-radius: 6px;
+  font-family: inherit;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  transition: border-color 0.3s ease;
+  background-color: #FAF7F0; /* very light cream */
+  color: #2B3A67; /* deep navy */
+}
+
+/* Form input focus state with gold border */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  border-color: #BFA156; /* muted gold */
+  outline: none;
+  box-shadow: 0 0 8px #BFA156aa; /* subtle gold glow */
+  background-color: #FFFBE6; /* lighter cream */
+  color: #2B3A67;
+}
+
+/* Form button with muted gold background */
+form button {
+  background-color: #BFA156; /* muted gold */
+  color: #2B3A67; /* deep navy */
+  border: none;
+  padding: 12px 26px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Button hover/focus with darker gold and subtle shadow */
+form button:hover,
+form button:focus {
+  background-color: #A3853A; /* darker gold */
+  box-shadow: 0 6px 14px rgba(163, 133, 58, 0.75);
+  color: #fff;
+}
+
+/* Footer with muted gold border and text */
+footer {
+  border-top: 3px solid #BFA156; /* muted gold */
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #7B8CAA; /* muted blue-gray */
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+/* Artworks gallery container */
+.artworks {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Each artwork card with soft cream background and subtle shadow */
+.artworks li {
+  max-width: 320px;
+  text-align: center;
+  background-color: #FAF7F0; /* light cream */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(43, 58, 103, 0.1); /* subtle navy shadow */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect: lift card and deepen shadow */
+.artworks li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(43, 58, 103, 0.2);
+}
+
+/* Artwork images with fixed height, cropped proportionally */
+.artworks img {
+  width: 100%;
+  height: 220px; /* fixed height for uniformity */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(43, 58, 103, 0.05);
+  margin-bottom: 15px;
+}
+
+/* Artwork titles with deep navy color */
+.artworks h3 {
+  color: #2B3A67;
+  margin-bottom: 8px;
+  letter-spacing: 0.8px;
+}
+
+/* Designer profile photo with gold border and subtle shadow */
+.designer-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #BFA156; /* muted gold border */
+  box-shadow: 0 6px 15px rgba(191, 161, 86, 0.25); /* gold glow */
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* Optional class for short story or descriptions */
+.art-story {
+  color: #6E7B99; /* soft blue-gray for readability */
+  font-style: italic;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
